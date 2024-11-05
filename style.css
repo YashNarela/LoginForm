@@ -20,6 +20,7 @@ body {
   background: white;
   border-radius: 30px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .form-box {
@@ -33,9 +34,10 @@ body {
   color: #333;
   text-align: center;
   padding: 40px;
+  z-index: 1;
 }
 
- .register {
+.register {
   visibility: hidden;
 }
 
@@ -119,4 +121,53 @@ form {
   font-size: 24px;
   color: #333;
   margin: 0 8px;
+}
+
+.toggle-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-box::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -250%;
+  border-radius: 150px;
+  background: #7494ec;
+  z-index: 2;
+}
+
+.container.active .toggle-box::before {
+  left: 50%;
+}
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.toggle-panel.toggle-right {
+  right: -50%;
+}
+
+.toggle-panel p {
+  margin-bottom: 20px;
+}
+
+.toggle-panel .btn {
+  width: 160px;
+  height: 46px;
+  background: transparent;
+  border: 2px solid #fff;
+  box-shadow: none;
 }
