@@ -207,7 +207,8 @@ form {
 
 @media screen and (max-width: 650px) {
   .container {
-    height: calc(100vh-20px);
+    /* height: calc(100vh-20px); */
+    height: 100vh;
   }
 
   .form-box {
@@ -263,7 +264,7 @@ form {
     padding: 20px;
   }
 
-  .toggle-panel h1{
+  .toggle-panel h1 {
     font-size: 30px;
   }
 }
